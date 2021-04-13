@@ -1,0 +1,10 @@
+#pragma once
+
+
+enum EmployeeDeptartment {
+	INFORMATION_TECHNOLOGY,
+	HUMAN_RESOURCES,
+	FINANCE,
+	LEGAL,
+	PUBLIC_RELATIONS
+};
