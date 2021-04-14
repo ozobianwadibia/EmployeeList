@@ -29,14 +29,16 @@ private:
 	string* collegeDegrees; // an array containing personnel degrees
 	string jobTitle;
 	double annualSalary;
-	EmployeeDeptartment dept;
+	EmployeeDeptartment department;
 
 public:
 	//constructors
 	Employee();
-	Employee(string, string, string, string, string, string, long long, int, string*, string, double, EmployeeDeptartment);
+	/*Employee(string, string, string, string, string, string, long long, int, string*, string, double, EmployeeDeptartment);*/
 
-	//destructor
+	Employee(string, string, string, string, string, string, long long, int, string, double, EmployeeDeptartment);
+
+	//destructozipcode
 	~Employee();
 
 	//accessor methods
@@ -51,22 +53,22 @@ public:
 	string* getCollegeDegrees() const; // dynamic array
 	string getJobTitle() const;
 	double getAnnualSalary() const;
-	EmployeeDeptartment getDegree() const;
+	EmployeeDeptartment getDepartment() const;
 
 
 	//mutator methods
-	void setEmployeeID(string employeeID);
-	void setFirstName(string firstName);
-	void setLastName(string lastName);
-	void setEmailAddress(string emailAddress);
-	void setBirthDay(string birthDay);
-	void setHireDate(string hireDate);
-	void setPhoneNumber(long long phoneNumber);
-	void setZipCode(int zipCode);
-	void setCollegeDegrees(string* collegeDegrees); // dynamic array
-	void setJobTitle(string jobTitle);
-	void setAnnualSalary(double annualSalary);
-	void setEmployeeDepartment(EmployeeDeptartment dept);
+	void setEmployeeID(string);
+	void setFirstName(string);
+	void setLastName(string);
+	void setEmailAddress(string);
+	void setBirthDay(string);
+	void setHireDate(string);
+	void setPhoneNumber(long long);
+	void setZipCode(int);
+	void setCollegeDegrees(string*); // dynamic array
+	void setJobTitle(string);
+	void setAnnualSalary(double);
+	void setEmployeeDepartment(EmployeeDeptartment);
 };
 
 
