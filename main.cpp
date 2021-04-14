@@ -1,6 +1,8 @@
 
 #include "list.h"
 
+using namespace std;
+
 //helper method that converts strings to enum
 EmployeeDeptartment stringsToEnum(const string& deptStrings) {
     if (deptStrings == "INFORMATION_TECHNOLOGY") {
@@ -84,10 +86,10 @@ int main()
             stringsToEnum(refine(employeeInformation[i])[13])));
     }
 
-   /* for (int i = 0; i < 20; i++) {
-        employeeList.employeeListArray[i]->print();
-    }
-   */
+
+    employeeList.printEveryEmployee();
+    cout << endl;
+   
   
     return 0;
 }

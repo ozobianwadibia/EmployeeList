@@ -10,6 +10,7 @@
 using namespace std;
 
 class List {
+private:
 
 public:
 	//constructor
@@ -28,14 +29,25 @@ public:
 
 	//prints out all the employees
 	void printEveryEmployee();
-	//prints out bad emails
-	void printIncorrectEmails();
-	//prints out employees by department
-	void printByEmployeeDepartment(EmployeeDeptartment department);
-	//deletes an employee from the list
-	void deleteEmployee(string); //employeeID
+
 	//sets width
 	void setWidth(string); //find out which string
+
+	//deletes an employee from the list
+	void deleteEmployee(string); //employeeID
+
+
+	//prints out bad emails
+	//void printIncorrectEmails();
+	//prints out employees by department
+	//void printByEmployeeDepartment(EmployeeDeptartment department);
+	
+
+
+
+
+
+	
 
 };
 

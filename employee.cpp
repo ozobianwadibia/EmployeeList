@@ -1,12 +1,11 @@
 #include "employee.h"
+#include "list.h"
 
 //no argument constructor
 Employee::Employee(){}
 
 //main constructor
 Employee::Employee(string empID, string fName, string lName, string email, string bDay, string hDay, long long phone, int zip, string* degrees, string job, double salary, EmployeeDeptartment dept)
-
-//Employee::Employee(string ID, string fName, string lName, string email, string bDay, string hDay, long long phone, int zip, string job, double salary, EmployeeDeptartment dept)
 {
 	employeeID = empID;
 	firstName = fName;
