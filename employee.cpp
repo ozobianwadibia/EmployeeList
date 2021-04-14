@@ -4,11 +4,11 @@
 Employee::Employee(){}
 
 //main constructor
-//Employee::Employee(string ID, string fName, string lName, string email, string bDay, string hDay, long long phone, int zip, string* degrees, string job, double salary, EmployeeDeptartment dept)
+Employee::Employee(string empID, string fName, string lName, string email, string bDay, string hDay, long long phone, int zip, string* degrees, string job, double salary, EmployeeDeptartment dept)
 
-Employee::Employee(string ID, string fName, string lName, string email, string bDay, string hDay, long long phone, int zip, string job, double salary, EmployeeDeptartment dept)
+//Employee::Employee(string ID, string fName, string lName, string email, string bDay, string hDay, long long phone, int zip, string job, double salary, EmployeeDeptartment dept)
 {
-	employeeID = ID;
+	employeeID = empID;
 	firstName = fName;
 	lastName = lName;
 	emailAddress = email;
@@ -16,7 +16,7 @@ Employee::Employee(string ID, string fName, string lName, string email, string b
 	hireDate = hDay;
 	phoneNumber = phone;
 	zipCode = zip;
-	//collegeDegrees = degrees;
+	collegeDegrees = degrees;
 	jobTitle = job;
 	annualSalary = salary;
 	department = dept;
@@ -159,4 +159,39 @@ void Employee::setAnnualSalary(double salary)
 void Employee::setEmployeeDepartment(EmployeeDeptartment dept)
 {
 	department = dept;
+}
+
+
+
+//method that converts enums to strings
+string Employee::convertEnumToString(EmployeeDeptartment department)
+{
+	switch (department) {
+	case INFORMATION_TECHNOLOGY:
+		return "INFORMATION_TECHNOLOGY";
+		break;
+	case HUMAN_RESOURCES:
+		return "HUMAN_RESOURCES";
+		break;
+	case FINANCE:
+		return "FINANCE";
+		break;
+	case LEGAL:
+		return "LEGAL";
+		break;
+	case PUBLIC_RELATIONS:
+		return "PUBLIC_RELATIONS";
+		break;
+	default:
+		return "Department, not found!";
+	}
+}
+
+void Employee::print()
+{
+	cout << employeeID << "\t" <<
+		"First Name: " << firstName << "\t" <<
+		"Last Name: " << lastName << "\t" <<
+		"Degrees acquired: {" << collegeDegrees[0] << "," << collegeDegrees[1] << "," << collegeDegrees[2] << "}" << "\t" <<
+		"Employee Department: " << convertEnumToString(dept) << endl;
 }

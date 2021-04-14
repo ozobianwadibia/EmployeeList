@@ -34,11 +34,11 @@ private:
 public:
 	//constructors
 	Employee();
-	/*Employee(string, string, string, string, string, string, long long, int, string*, string, double, EmployeeDeptartment);*/
+	Employee(string, string, string, string, string, string, long long, int, string*, string, double, EmployeeDeptartment);
 
-	Employee(string, string, string, string, string, string, long long, int, string, double, EmployeeDeptartment);
+	//Employee(string, string, string, string, string, string, long long, int, string, double, EmployeeDeptartment);
 
-	//destructozipcode
+	//destructor
 	~Employee();
 
 	//accessor methods
@@ -69,6 +69,11 @@ public:
 	void setJobTitle(string);
 	void setAnnualSalary(double);
 	void setEmployeeDepartment(EmployeeDeptartment);
+
+public:
+	void print();
+	//void initPrint(); return to me later
+	string convertEnumToString(EmployeeDeptartment department);
 };
 
 
