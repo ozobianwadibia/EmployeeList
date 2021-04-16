@@ -5,7 +5,7 @@
 Employee::Employee(){}
 
 //main constructor
-Employee::Employee(string empID, string fName, string lName, string email, string bDay, string hDay, long long phone, int zip, string* degrees, string job, double salary, EmployeeDeptartment dept)
+Employee::Employee(string empID, string fName, string lName, string email, string bDay, string hDay, int zip, string* degrees, string job, double salary, EmployeeDepartment dept)
 {
 	employeeID = empID;
 	firstName = fName;
@@ -13,14 +13,13 @@ Employee::Employee(string empID, string fName, string lName, string email, strin
 	emailAddress = email;
 	birthDay = bDay;
 	hireDate = hDay;
-	phoneNumber = phone;
 	zipCode = zip;
 	collegeDegrees = degrees;
 	jobTitle = job;
 	annualSalary = salary;
 	department = dept;
-
 }
+
 
 //destructor
 Employee::~Employee()
@@ -83,7 +82,7 @@ double Employee::getAnnualSalary() const
 	return annualSalary;
 }
 
-EmployeeDeptartment Employee::getDepartment() const
+EmployeeDepartment Employee::getDepartment() const
 {
 	return department;
 }
@@ -155,7 +154,7 @@ void Employee::setAnnualSalary(double salary)
 	return;
 }
 
-void Employee::setEmployeeDepartment(EmployeeDeptartment dept)
+void Employee::setEmployeeDepartment(EmployeeDepartment dept)
 {
 	department = dept;
 }
@@ -163,26 +162,26 @@ void Employee::setEmployeeDepartment(EmployeeDeptartment dept)
 
 
 //method that converts enums to strings
-string Employee::convertEnumToString(EmployeeDeptartment department)
+string Employee::convertEnumToString(EmployeeDepartment department)
 {
 	switch (department) {
 	case INFORMATION_TECHNOLOGY:
-		return "INFORMATION_TECHNOLOGY";
+		return "Information Technology";
 		break;
 	case HUMAN_RESOURCES:
-		return "HUMAN_RESOURCES";
+		return "Human Resources";
 		break;
 	case FINANCE:
-		return "FINANCE";
+		return "Finance";
 		break;
 	case LEGAL:
-		return "LEGAL";
+		return "Legal";
 		break;
 	case PUBLIC_RELATIONS:
-		return "PUBLIC_RELATIONS";
+		return "Public Relations";
 		break;
 	default:
-		return "Department, not found!";
+		return "Department, not found or Invalid!";
 	}
 }
 
@@ -192,5 +191,5 @@ void Employee::print()
 		"First Name: " << firstName << "\t" <<
 		"Last Name: " << lastName << "\t" <<
 		"Degrees acquired: {" << collegeDegrees[0] << "," << collegeDegrees[1] << "," << collegeDegrees[2] << "}" << "\t" <<
-		"Employee Department: " << convertEnumToString(dept) << endl;
+		"Employee Department: " << convertEnumToString(department) << endl;
 }

@@ -24,19 +24,19 @@ private:
 	string emailAddress; // e.g. kill_parasites@live.com
 	string birthDay; // e.g. 16 April 2001
 	string hireDate; // e.g. 15 March 2003
-	long long phoneNumber; // e.g. 6541239879 (10 digits)
+	//long long phoneNumber; 
 	int zipCode; // e.g. 92055
 	string* collegeDegrees; // an array containing personnel degrees
 	string jobTitle;
 	double annualSalary;
-	EmployeeDeptartment department;
+	EmployeeDepartment department;
+
 
 public:
 	//constructors
 	Employee();
-	Employee(string, string, string, string, string, string, long long, int, string*, string, double, EmployeeDeptartment);
+	Employee(string, string, string, string, string, string, int, string*, string, double, EmployeeDepartment);
 
-	//Employee(string, string, string, string, string, string, long long, int, string, double, EmployeeDeptartment);
 
 	//destructor
 	~Employee();
@@ -53,7 +53,7 @@ public:
 	string* getCollegeDegrees() const; // dynamic array
 	string getJobTitle() const;
 	double getAnnualSalary() const;
-	EmployeeDeptartment getDepartment() const;
+	EmployeeDepartment getDepartment() const;
 
 
 	//mutator methods
@@ -68,12 +68,12 @@ public:
 	void setCollegeDegrees(string*); // dynamic array
 	void setJobTitle(string);
 	void setAnnualSalary(double);
-	void setEmployeeDepartment(EmployeeDeptartment);
+	void setEmployeeDepartment(EmployeeDepartment);
 
 public:
 	void print();
 	//void initPrint(); return to me later
-	string convertEnumToString(EmployeeDeptartment department);
+	string convertEnumToString(EmployeeDepartment department);
 };
 
 
