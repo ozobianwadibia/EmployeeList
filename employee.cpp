@@ -5,18 +5,13 @@
 Employee::Employee(){}
 
 //main constructor
-Employee::Employee(string empID, string fName, string lName, string email, string bDay, string hDay, int zip, string* degrees, string job, double salary, EmployeeDepartment dept)
+Employee::Employee(string empID, string fName, string lName, string email, int age, EmployeeDepartment dept)
 {
 	employeeID = empID;
 	firstName = fName;
 	lastName = lName;
 	emailAddress = email;
-	birthDay = bDay;
-	hireDate = hDay;
-	zipCode = zip;
-	collegeDegrees = degrees;
-	jobTitle = job;
-	annualSalary = salary;
+	chronologicalAge = age;
 	department = dept;
 }
 
@@ -57,10 +52,6 @@ string Employee::getHireDate() const
 	return hireDate;
 }
 
-long long Employee::getPhoneNumber() const
-{
-	return phoneNumber;
-}
 
 int Employee::getZipCode() const
 {
@@ -124,11 +115,6 @@ void Employee::setHireDate(string hDay)
 	return;
 }
 
-void Employee::setPhoneNumber(long long phone)
-{
-	phoneNumber = phone;
-	return;
-}
 
 void Employee::setZipCode(int zip)
 {
@@ -190,6 +176,94 @@ void Employee::print()
 	cout << employeeID << "\t" <<
 		"First Name: " << firstName << "\t" <<
 		"Last Name: " << lastName << "\t" <<
-		"Degrees acquired: {" << collegeDegrees[0] << "," << collegeDegrees[1] << "," << collegeDegrees[2] << "}" << "\t" <<
 		"Employee Department: " << convertEnumToString(department) << endl;
 }
+
+//************************************************************************************************************//
+//method that sets width of underscores
+void Employee::setWidth(string comment)
+{
+	int width = comment.length();
+	for (int i = 0; i < width; i++) {
+		cout << "-";
+	}
+}
+
+//helper method that converts enum values to string
+string enumToDepartmentString(EmployeeDepartment department) {
+	switch (department) {
+	case 0:
+		return "INFORMATION_TECHNOLOGY";
+		break;
+	case 1:
+		return "HUMAN_RESOURCES";
+		break;
+	case 2:
+		return "FINANCE";
+		break;
+	case 3:
+		return "LEGAL";
+		break;
+	case 4:
+		return "PUBLIC_RELATIONS";
+		break;
+	default:
+		return "Department, not found!";
+	}
+}
+
+
+
+//the addEmployee method
+void Employee::addEmployee(string empID, string fName, string lName, string email, int age, EmployeeDepartment dept)
+{
+	// no return for void method
+	return Employee(empID, fName, lName, email, age, dept);
+}
+
+
+
+//print method that displays all employees
+void Employee::printEveryEmployee()
+{
+	string emp = "All The employees in the various departments.";
+	cout << emp << endl;
+	List::setWidth(emp);
+	cout << endl;
+	for (int j = 0; j < sizeof(employeeListArray) / sizeof(employeeListArray[0]); j++) {
+		string empID = employeeListArray[j]->getEmployeeID();
+		if (empID[0] == 'E') {
+			employeeListArray[j]->print();
+		}
+	}
+}
+
+//method that deletes a specified employee
+void Employee::deleteEmployee(string empID)
+{
+	cout << "Calling the 'deleteEmployee' method: " << endl;
+	int d;
+	for (d = 0; d < sizeof(employeeListArray) / sizeof(employeeListArray[0]); d++) {
+		string _empID = employeeListArray[d]->getEmployeeID();
+		if (_empID == empID) {
+			cout << "The specified employee is not found!!!" << endl;
+		}
+		if (employeeListArray[d]->getEmployeeID == empID) {
+			employeeListArray[d]->setEmployeeID("");
+			cout << "The specified employee has been deleted!!!" << endl;
+		}
+	}
+}
+
+//print method that displays employee(s) in a specified department 
+void Employee::printByEmployeeDepartment(EmployeeDepartment department)
+{
+	cout << "Employee(s) who work in this department: " << "[" << enumToDepartmentString(department) << "]" << ", are printed below: " << endl;
+	cout << setfill('-') << setw(75) << "" << endl;
+	for (int x = 0; x < 10; x++) {
+		if (employeeListArray[x]->getDepartment() == department) {
+			employeeListArray[x]->print();
+		}
+	}
+}
+

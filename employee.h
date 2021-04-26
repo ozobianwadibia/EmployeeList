@@ -18,24 +18,20 @@ using namespace std;
 class Employee {
 	
 private:
-	string employeeID; // e.g. EN001
+	string employeeID; 
 	string firstName;
 	string lastName;
-	string emailAddress; // e.g. kill_parasites@live.com
-	string birthDay; // e.g. 16 April 2001
-	string hireDate; // e.g. 15 March 2003
-	//long long phoneNumber; 
-	int zipCode; // e.g. 92055
-	string* collegeDegrees; // an array containing personnel degrees
-	string jobTitle;
-	double annualSalary;
+	string emailAddress; 
+	int chronologicalAge;
 	EmployeeDepartment department;
 
 
 public:
 	//constructors
 	Employee();
-	Employee(string, string, string, string, string, string, int, string*, string, double, EmployeeDepartment);
+	Employee(string, string, string, string, int, EmployeeDepartment);
+
+	Employee *employeeListArray[10];
 
 
 	//destructor
@@ -48,9 +44,9 @@ public:
 	string getEmailAddress() const;
 	string getBirthDay() const;
 	string getHireDate() const;
-	long long getPhoneNumber() const;
 	int getZipCode() const;
 	string* getCollegeDegrees() const; // dynamic array
+	//GETTER METHOD for degreetime!!!
 	string getJobTitle() const;
 	double getAnnualSalary() const;
 	EmployeeDepartment getDepartment() const;
@@ -63,9 +59,9 @@ public:
 	void setEmailAddress(string);
 	void setBirthDay(string);
 	void setHireDate(string);
-	void setPhoneNumber(long long);
 	void setZipCode(int);
 	void setCollegeDegrees(string*); // dynamic array
+	//SETTER METHOD for degreetime!!!
 	void setJobTitle(string);
 	void setAnnualSalary(double);
 	void setEmployeeDepartment(EmployeeDepartment);
@@ -74,6 +70,25 @@ public:
 	void print();
 	//void initPrint(); return to me later
 	string convertEnumToString(EmployeeDepartment department);
+
+	//adds an employee
+	void addEmployee(string, string, string, string, int, EmployeeDepartment);
+
+	//prints out all the employees
+	void printEveryEmployee();
+
+	//sets width
+	void setWidth(string); //find out which string
+
+	//deletes an employee from the list
+	void deleteEmployee(string); //employeeID
+
+	//prints out employees by department
+	void printByEmployeeDepartment(EmployeeDepartment department);
+
+
+	//prints out bad emails
+	//void printIncorrectEmails();
 };
 
 
