@@ -11,7 +11,7 @@
 #include <ios>
 #include <iomanip>
 #include <cstdlib>
-#include <typeinfo>
+
 
 using namespace std;
 
@@ -31,9 +31,6 @@ public:
 	Employee();
 	Employee(string, string, string, string, int, EmployeeDepartment);
 
-	Employee *employeeListArray[10];
-
-
 	//destructor
 	~Employee();
 
@@ -42,13 +39,7 @@ public:
 	string getFirstName() const;
 	string getLastName() const;
 	string getEmailAddress() const;
-	string getBirthDay() const;
-	string getHireDate() const;
-	int getZipCode() const;
-	string* getCollegeDegrees() const; // dynamic array
-	//GETTER METHOD for degreetime!!!
-	string getJobTitle() const;
-	double getAnnualSalary() const;
+	int getChronologicalAge() const;
 	EmployeeDepartment getDepartment() const;
 
 
@@ -57,13 +48,7 @@ public:
 	void setFirstName(string);
 	void setLastName(string);
 	void setEmailAddress(string);
-	void setBirthDay(string);
-	void setHireDate(string);
-	void setZipCode(int);
-	void setCollegeDegrees(string*); // dynamic array
-	//SETTER METHOD for degreetime!!!
-	void setJobTitle(string);
-	void setAnnualSalary(double);
+	void setChronologicalAge(int);
 	void setEmployeeDepartment(EmployeeDepartment);
 
 public:
@@ -71,8 +56,6 @@ public:
 	//void initPrint(); return to me later
 	string convertEnumToString(EmployeeDepartment department);
 
-	//adds an employee
-	void addEmployee(string, string, string, string, int, EmployeeDepartment);
 
 	//prints out all the employees
 	void printEveryEmployee();
@@ -86,9 +69,8 @@ public:
 	//prints out employees by department
 	void printByEmployeeDepartment(EmployeeDepartment department);
 
-
 	//prints out bad emails
-	//void printIncorrectEmails();
+	void printIncorrectEmails();
 };
 
 

@@ -1,5 +1,7 @@
 #include "employee.h"
-#include "list.h"
+#include <iostream>
+
+using namespace std;
 
 //no argument constructor
 Employee::Employee(){}
@@ -42,35 +44,9 @@ string Employee::getEmailAddress() const
 	return emailAddress;
 }
 
-string Employee::getBirthDay() const
+int Employee::getChronologicalAge() const
 {
-	return birthDay;
-}
-
-string Employee::getHireDate() const
-{
-	return hireDate;
-}
-
-
-int Employee::getZipCode() const
-{
-	return zipCode;
-}
-
-string* Employee::getCollegeDegrees() const
-{
-	return collegeDegrees;
-}
-
-string Employee::getJobTitle() const
-{
-	return jobTitle;
-}
-
-double Employee::getAnnualSalary() const
-{
-	return annualSalary;
+	return chronologicalAge;
 }
 
 EmployeeDepartment Employee::getDepartment() const
@@ -103,41 +79,9 @@ void Employee::setEmailAddress(string email)
 	return;
 }
 
-void Employee::setBirthDay(string bDay)
+void Employee::setChronologicalAge(int age)
 {
-	birthDay = bDay;
-	return;
-}
-
-void Employee::setHireDate(string hDay)
-{
-	hireDate = hDay;
-	return;
-}
-
-
-void Employee::setZipCode(int zip)
-{
-	zipCode = zip;
-	return;
-}
-
-void Employee::setCollegeDegrees(string* degrees)
-{
-	collegeDegrees = degrees;
-	return;
-}
-
-void Employee::setJobTitle(string job)
-{
-	jobTitle = job;
-	return;
-}
-
-void Employee::setAnnualSalary(double salary)
-{
-	annualSalary = salary;
-	return;
+	chronologicalAge = age;
 }
 
 void Employee::setEmployeeDepartment(EmployeeDepartment dept)
@@ -173,10 +117,10 @@ string Employee::convertEnumToString(EmployeeDepartment department)
 
 void Employee::print()
 {
-	cout << employeeID << "\t" <<
+	/*cout << employeeID << "\t" <<
 		"First Name: " << firstName << "\t" <<
 		"Last Name: " << lastName << "\t" <<
-		"Employee Department: " << convertEnumToString(department) << endl;
+		"Employee Department: " << convertEnumToString(department) << endl;*/
 }
 
 //************************************************************************************************************//
@@ -213,35 +157,25 @@ string enumToDepartmentString(EmployeeDepartment department) {
 }
 
 
-
-//the addEmployee method
-void Employee::addEmployee(string empID, string fName, string lName, string email, int age, EmployeeDepartment dept)
-{
-	// no return for void method
-	return Employee(empID, fName, lName, email, age, dept);
-}
-
-
-
 //print method that displays all employees
 void Employee::printEveryEmployee()
 {
-	string emp = "All The employees in the various departments.";
+	/*string emp = "All The employees in the various departments.";
 	cout << emp << endl;
-	List::setWidth(emp);
+	Employee::setWidth(emp);
 	cout << endl;
 	for (int j = 0; j < sizeof(employeeListArray) / sizeof(employeeListArray[0]); j++) {
 		string empID = employeeListArray[j]->getEmployeeID();
 		if (empID[0] == 'E') {
 			employeeListArray[j]->print();
 		}
-	}
+	}*/
 }
 
 //method that deletes a specified employee
 void Employee::deleteEmployee(string empID)
 {
-	cout << "Calling the 'deleteEmployee' method: " << endl;
+	/*cout << "Calling the 'deleteEmployee' method: " << endl;
 	int d;
 	for (d = 0; d < sizeof(employeeListArray) / sizeof(employeeListArray[0]); d++) {
 		string _empID = employeeListArray[d]->getEmployeeID();
@@ -252,18 +186,22 @@ void Employee::deleteEmployee(string empID)
 			employeeListArray[d]->setEmployeeID("");
 			cout << "The specified employee has been deleted!!!" << endl;
 		}
-	}
+	}*/
 }
 
 //print method that displays employee(s) in a specified department 
 void Employee::printByEmployeeDepartment(EmployeeDepartment department)
 {
-	cout << "Employee(s) who work in this department: " << "[" << enumToDepartmentString(department) << "]" << ", are printed below: " << endl;
+	/*cout << "Employee(s) who work in this department: " << "[" << enumToDepartmentString(department) << "]" << ", are printed below: " << endl;
 	cout << setfill('-') << setw(75) << "" << endl;
 	for (int x = 0; x < 10; x++) {
 		if (employeeListArray[x]->getDepartment() == department) {
 			employeeListArray[x]->print();
 		}
-	}
+	}*/
 }
 
+//print method that displays employee(s) with invalid emails
+void Employee::printIncorrectEmails()
+{
+}

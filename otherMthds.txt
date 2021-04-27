@@ -1,0 +1,35 @@
+//helper method that converts strings to enum
+EmployeeDepartment stringsToEnum(const string& deptStrings) {
+    if (deptStrings == "INFORMATION_TECHNOLOGY") {
+        return INFORMATION_TECHNOLOGY;
+    }
+    else if (deptStrings == "HUMAN_RESOURCES") {
+        return HUMAN_RESOURCES;
+    }
+    else if (deptStrings == "FINANCE") {
+        return FINANCE;
+    }
+    else if (deptStrings == "LEGAL") {
+        return LEGAL;
+    }
+    else if (deptStrings == "PUBLIC_RELATIONS") {
+        return PUBLIC_RELATIONS;
+    }
+}
+
+//helper method that processes strings
+string* refine(string row) {
+    const int ROW_SIZE = 14;
+    string* containerArray = new string[ROW_SIZE];
+    int i = 0;
+
+    stringstream rowStream(row);
+    while (rowStream.good()) {
+        string substr;
+        getline(rowStream, substr, ',');
+        containerArray[i] = substr;
+        i++;
+    }
+
+    return containerArray;
+}

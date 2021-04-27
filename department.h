@@ -1,6 +1,5 @@
 #pragma once
 
-
 enum EmployeeDepartment {
 	INFORMATION_TECHNOLOGY, // 0
 	HUMAN_RESOURCES,        // 1
