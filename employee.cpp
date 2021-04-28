@@ -115,12 +115,43 @@ string Employee::convertEnumToString(EmployeeDepartment department)
 	}
 }
 
-void Employee::print()
+//method that prints a single employee
+void Employee::printAnEmployee(Employee emp) {
+cout << "Employee ID: " << emp.getEmployeeID() << "\t" <<
+		"First Name: " << emp.getFirstName() << "\t" <<
+		"Last Name: " << emp.getLastName() << "\t" <<
+		"Employee Department: " << convertEnumToString(emp.getDepartment()) << endl;
+}
+
+//print method that displays all employees
+void Employee::printEveryEmployee(Employee emp[])
 {
-	/*cout << employeeID << "\t" <<
-		"First Name: " << firstName << "\t" <<
-		"Last Name: " << lastName << "\t" <<
-		"Employee Department: " << convertEnumToString(department) << endl;*/
+	string _emp = "All The employees in the various departments.";
+	cout << _emp << endl;
+	Employee::setWidth(_emp);
+	cout << endl;
+	for (int j = 0; j < 10; j++) {
+	    if (emp[j].getEmployeeID() != ""){
+	        emp[j].printAnEmployee(emp[j]);
+	    }
+	}
+}
+
+void Employee::deleteEmployee(Employee e[], string ID) {
+    cout << "Calling the 'deleteEmployee' method" << endl;
+    int i;
+    int size = 10;
+
+    for(i = 0; i < size; i++) {
+        string _ID = e[i].getEmployeeID();
+        if (_ID == ID) {
+            cout << "Employee not found" << endl;
+        }
+        if (e[i].getEmployeeID() == ID) {
+            e[i].setEmployeeID("");
+            cout << "The employee has been deleted!!!" << endl;
+        }
+    }
 }
 
 //************************************************************************************************************//
@@ -157,51 +188,24 @@ string enumToDepartmentString(EmployeeDepartment department) {
 }
 
 
-//print method that displays all employees
-void Employee::printEveryEmployee()
-{
-	/*string emp = "All The employees in the various departments.";
-	cout << emp << endl;
-	Employee::setWidth(emp);
-	cout << endl;
-	for (int j = 0; j < sizeof(employeeListArray) / sizeof(employeeListArray[0]); j++) {
-		string empID = employeeListArray[j]->getEmployeeID();
-		if (empID[0] == 'E') {
-			employeeListArray[j]->print();
-		}
-	}*/
-}
 
-//method that deletes a specified employee
-void Employee::deleteEmployee(string empID)
-{
-	/*cout << "Calling the 'deleteEmployee' method: " << endl;
-	int d;
-	for (d = 0; d < sizeof(employeeListArray) / sizeof(employeeListArray[0]); d++) {
-		string _empID = employeeListArray[d]->getEmployeeID();
-		if (_empID == empID) {
-			cout << "The specified employee is not found!!!" << endl;
-		}
-		if (employeeListArray[d]->getEmployeeID == empID) {
-			employeeListArray[d]->setEmployeeID("");
-			cout << "The specified employee has been deleted!!!" << endl;
-		}
-	}*/
-}
+
 
 //print method that displays employee(s) in a specified department 
-void Employee::printByEmployeeDepartment(EmployeeDepartment department)
-{
-	/*cout << "Employee(s) who work in this department: " << "[" << enumToDepartmentString(department) << "]" << ", are printed below: " << endl;
-	cout << setfill('-') << setw(75) << "" << endl;
-	for (int x = 0; x < 10; x++) {
-		if (employeeListArray[x]->getDepartment() == department) {
-			employeeListArray[x]->print();
-		}
-	}*/
-}
+//void Employee::printByEmployeeDepartment(EmployeeDepartment department)
+//{
+//	cout << "Employee(s) who work in this department: " << "[" << enumToDepartmentString(department) << "]" << ", are printed below: " << endl;
+//	cout << setfill('-') << setw(75) << "" << endl;
+//	for (int x = 0; x < 10; x++) {
+//		if (employeeListArray[x].getDepartment() == department) {
+//			employeeListArray[x].print();
+//		}
+//	}
+//}
 
 //print method that displays employee(s) with invalid emails
-void Employee::printIncorrectEmails()
-{
-}
+//void Employee::printIncorrectEmails()
+//{
+//}
+
+

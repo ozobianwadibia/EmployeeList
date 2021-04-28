@@ -16,7 +16,7 @@ EmployeeDepartment stringsToEnum(const string& deptStrings) {
         return PUBLIC_RELATIONS;
     }
 }
-
+//********************************************************************************//
 //helper method that processes strings
 string* refine(string row) {
     const int ROW_SIZE = 14;
@@ -33,3 +33,23 @@ string* refine(string row) {
 
     return containerArray;
 }
+//********************************************************************************//
+
+//method that deletes a specified employee
+void Employee::deleteEmployee(string empID)
+{
+    Employee someArray[10];
+    cout << "Calling the 'deleteEmployee' method: " << endl;
+    int d;
+    for (d = 0; d < sizeof(someArray) / sizeof(someArray[0]); d++) {
+        string _empID = someArray[d].getEmployeeID();
+        if (_empID == empID) {
+            cout << "The specified employee is not found!!!" << endl;
+        }
+        if (someArray[d].getEmployeeID() == empID) {
+            someArray[d].setEmployeeID("");
+            cout << "The specified employee has been deleted!!!" << endl;
+        }
+    }
+}
+//**********************************************************************************//

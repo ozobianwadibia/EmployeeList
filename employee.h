@@ -52,25 +52,27 @@ public:
 	void setEmployeeDepartment(EmployeeDepartment);
 
 public:
-	void print();
-	//void initPrint(); return to me later
+	void print(Employee);
 	string convertEnumToString(EmployeeDepartment department);
 
+    //prints one employee
+    void printAnEmployee(Employee);
 
 	//prints out all the employees
-	void printEveryEmployee();
+	void printEveryEmployee(Employee[]);
 
 	//sets width
-	void setWidth(string); //find out which string
+	void setWidth(string);
 
 	//deletes an employee from the list
-	void deleteEmployee(string); //employeeID
+	void deleteEmployee(Employee[], string); //employeeID
 
 	//prints out employees by department
-	void printByEmployeeDepartment(EmployeeDepartment department);
+//	void printByEmployeeDepartment(EmployeeDepartment department);
 
 	//prints out bad emails
-	void printIncorrectEmails();
+//	void printIncorrectEmails();
+
 };
 
 

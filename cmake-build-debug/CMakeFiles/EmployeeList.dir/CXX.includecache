@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Ozobi/Desktop/EmployeeList/department.h
+
+C:/Users/Ozobi/Desktop/EmployeeList/employee.h
+department.h
+C:/Users/Ozobi/Desktop/EmployeeList/department.h
+iostream
+-
+sstream
+-
+string
+-
+ios
+-
+iomanip
+-
+cstdlib
+-
+
+C:/Users/Ozobi/Desktop/EmployeeList/main.cpp
+employee.h
+C:/Users/Ozobi/Desktop/EmployeeList/employee.h
+

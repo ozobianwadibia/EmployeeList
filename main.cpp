@@ -1,13 +1,10 @@
 
 #include "employee.h"
 
-
 //main program
-
 int main()
 {
- 
-    //array to contain the employees
+     //array to contain the employees
      Employee employeeListArray[10];
 
      Employee a1("EN010", "Abigail", "Baker", "a.baker@randatmail.com", 45, INFORMATION_TECHNOLOGY);
@@ -21,17 +18,27 @@ int main()
      Employee a9("EN018", "Gianna", "Johnson", "g.johnson@randatmail.com", 41, PUBLIC_RELATIONS);
      Employee a10("EN019", "Frederick", "Cooper", "f.cooper@randatmail.com", 38, PUBLIC_RELATIONS);
 
-     for (int i = 0; i < 10; i++) {
-         employeeListArray[i] == a + (i + 1);
-     }
-    
+     const int empArraySize = sizeof(employeeListArray) / sizeof(employeeListArray[0]);
 
-    cout << "See Me!" << endl;
-    cout << "Honey, I am home!" << endl;
+    employeeListArray[0] = a1;
+    employeeListArray[1] = a2;
+    employeeListArray[2] = a3;
+    employeeListArray[3] = a4;
+    employeeListArray[4] = a5;
+    employeeListArray[5] = a6;
+    employeeListArray[6] = a7;
+    employeeListArray[7] = a8;
+    employeeListArray[8] = a9;
+    employeeListArray[9] = a10;
+
+    employeeListArray->printEveryEmployee(employeeListArray);
+    employeeListArray->deleteEmployee(employeeListArray, "EN019");
+    employeeListArray->printEveryEmployee(employeeListArray);
+    employeeListArray->deleteEmployee(employeeListArray, "EN018");
+    employeeListArray->printEveryEmployee(employeeListArray);
 
     cout << endl;
-   
-  
+
     return 0;
 }
 
