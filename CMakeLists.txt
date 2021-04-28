@@ -13,7 +13,6 @@ add_executable(EmployeeList
         .idea/vcs.xml
         .idea/workspace.xml
         .gitattributes
-        .gitignore
         department.h
         employee.cpp
         employee.h
