@@ -6,11 +6,17 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Ozobi/Desktop/EmployeeList/department.h
+C:/Users/Ozobi/Desktop/TEMP Projects/EmployeeList/department.h
 
-C:/Users/Ozobi/Desktop/EmployeeList/employee.h
+C:/Users/Ozobi/Desktop/TEMP Projects/EmployeeList/employee.cpp
+employee.h
+C:/Users/Ozobi/Desktop/TEMP Projects/EmployeeList/employee.h
+iostream
+-
+
+C:/Users/Ozobi/Desktop/TEMP Projects/EmployeeList/employee.h
 department.h
-C:/Users/Ozobi/Desktop/EmployeeList/department.h
+C:/Users/Ozobi/Desktop/TEMP Projects/EmployeeList/department.h
 iostream
 -
 sstream
@@ -23,8 +29,4 @@ iomanip
 -
 cstdlib
 -
-
-C:/Users/Ozobi/Desktop/EmployeeList/main.cpp
-employee.h
-C:/Users/Ozobi/Desktop/EmployeeList/employee.h
 

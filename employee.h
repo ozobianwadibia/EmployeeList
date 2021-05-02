@@ -52,8 +52,8 @@ public:
 	void setEmployeeDepartment(EmployeeDepartment);
 
 public:
-	void print(Employee);
-	string convertEnumToString(EmployeeDepartment department);
+    //helper function to convert enums to string
+    string convertEnumToString(EmployeeDepartment department);
 
     //prints one employee
     void printAnEmployee(Employee);
@@ -64,7 +64,9 @@ public:
 	//sets width
 	void setWidth(string);
 
-	//deletes an employee from the list
+
+
+    //deletes an employee from the list
 	void deleteEmployee(Employee[], string); //employeeID
 
 	//prints out employees by department
@@ -74,6 +76,5 @@ public:
 //	void printIncorrectEmails();
 
 };
-
 
 #endif // EMPLOYEE_H

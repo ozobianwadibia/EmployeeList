@@ -34,8 +34,15 @@ int main()
     employeeListArray->printEveryEmployee(employeeListArray);
     employeeListArray->deleteEmployee(employeeListArray, "EN019");
     employeeListArray->printEveryEmployee(employeeListArray);
-    employeeListArray->deleteEmployee(employeeListArray, "EN018");
+    employeeListArray->deleteEmployee(employeeListArray, "EN019");
     employeeListArray->printEveryEmployee(employeeListArray);
+    employeeListArray->deleteEmployee(employeeListArray, "EN015");
+    employeeListArray->printEveryEmployee(employeeListArray);
+    employeeListArray->deleteEmployee(employeeListArray, "EN015");
+    employeeListArray->printEveryEmployee(employeeListArray);
+
+
+    employeeListArray->printAnEmployee(a1);
 
     cout << endl;
 

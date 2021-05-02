@@ -61,10 +61,10 @@ RM = "C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Ozobi\Desktop\EmployeeList
+CMAKE_SOURCE_DIR = "C:\Users\Ozobi\Desktop\TEMP Projects\EmployeeList"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Ozobi\Desktop\EmployeeList\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Users\Ozobi\Desktop\TEMP Projects\EmployeeList\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/EmployeeList.dir/depend.make
@@ -78,30 +78,30 @@ include CMakeFiles/EmployeeList.dir/flags.make
 CMakeFiles/EmployeeList.dir/employee.cpp.obj: CMakeFiles/EmployeeList.dir/flags.make
 CMakeFiles/EmployeeList.dir/employee.cpp.obj: CMakeFiles/EmployeeList.dir/includes_CXX.rsp
 CMakeFiles/EmployeeList.dir/employee.cpp.obj: ../employee.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Ozobi\Desktop\EmployeeList\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/EmployeeList.dir/employee.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\EmployeeList.dir\employee.cpp.obj -c C:\Users\Ozobi\Desktop\EmployeeList\employee.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Ozobi\Desktop\TEMP Projects\EmployeeList\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/EmployeeList.dir/employee.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\EmployeeList.dir\employee.cpp.obj -c "C:\Users\Ozobi\Desktop\TEMP Projects\EmployeeList\employee.cpp"
 
 CMakeFiles/EmployeeList.dir/employee.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EmployeeList.dir/employee.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Ozobi\Desktop\EmployeeList\employee.cpp > CMakeFiles\EmployeeList.dir\employee.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Ozobi\Desktop\TEMP Projects\EmployeeList\employee.cpp" > CMakeFiles\EmployeeList.dir\employee.cpp.i
 
 CMakeFiles/EmployeeList.dir/employee.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EmployeeList.dir/employee.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Ozobi\Desktop\EmployeeList\employee.cpp -o CMakeFiles\EmployeeList.dir\employee.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Ozobi\Desktop\TEMP Projects\EmployeeList\employee.cpp" -o CMakeFiles\EmployeeList.dir\employee.cpp.s
 
 CMakeFiles/EmployeeList.dir/main.cpp.obj: CMakeFiles/EmployeeList.dir/flags.make
 CMakeFiles/EmployeeList.dir/main.cpp.obj: CMakeFiles/EmployeeList.dir/includes_CXX.rsp
 CMakeFiles/EmployeeList.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Ozobi\Desktop\EmployeeList\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/EmployeeList.dir/main.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\EmployeeList.dir\main.cpp.obj -c C:\Users\Ozobi\Desktop\EmployeeList\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Ozobi\Desktop\TEMP Projects\EmployeeList\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/EmployeeList.dir/main.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\EmployeeList.dir\main.cpp.obj -c "C:\Users\Ozobi\Desktop\TEMP Projects\EmployeeList\main.cpp"
 
 CMakeFiles/EmployeeList.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EmployeeList.dir/main.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Ozobi\Desktop\EmployeeList\main.cpp > CMakeFiles\EmployeeList.dir\main.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Ozobi\Desktop\TEMP Projects\EmployeeList\main.cpp" > CMakeFiles\EmployeeList.dir\main.cpp.i
 
 CMakeFiles/EmployeeList.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EmployeeList.dir/main.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Ozobi\Desktop\EmployeeList\main.cpp -o CMakeFiles\EmployeeList.dir\main.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Ozobi\Desktop\TEMP Projects\EmployeeList\main.cpp" -o CMakeFiles\EmployeeList.dir\main.cpp.s
 
 # Object files for target EmployeeList
 EmployeeList_OBJECTS = \
@@ -117,7 +117,7 @@ EmployeeList.exe: CMakeFiles/EmployeeList.dir/build.make
 EmployeeList.exe: CMakeFiles/EmployeeList.dir/linklibs.rsp
 EmployeeList.exe: CMakeFiles/EmployeeList.dir/objects1.rsp
 EmployeeList.exe: CMakeFiles/EmployeeList.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Ozobi\Desktop\EmployeeList\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable EmployeeList.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Ozobi\Desktop\TEMP Projects\EmployeeList\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable EmployeeList.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\EmployeeList.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -130,6 +130,6 @@ CMakeFiles/EmployeeList.dir/clean:
 .PHONY : CMakeFiles/EmployeeList.dir/clean
 
 CMakeFiles/EmployeeList.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Ozobi\Desktop\EmployeeList C:\Users\Ozobi\Desktop\EmployeeList C:\Users\Ozobi\Desktop\EmployeeList\cmake-build-debug C:\Users\Ozobi\Desktop\EmployeeList\cmake-build-debug C:\Users\Ozobi\Desktop\EmployeeList\cmake-build-debug\CMakeFiles\EmployeeList.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Ozobi\Desktop\TEMP Projects\EmployeeList" "C:\Users\Ozobi\Desktop\TEMP Projects\EmployeeList" "C:\Users\Ozobi\Desktop\TEMP Projects\EmployeeList\cmake-build-debug" "C:\Users\Ozobi\Desktop\TEMP Projects\EmployeeList\cmake-build-debug" "C:\Users\Ozobi\Desktop\TEMP Projects\EmployeeList\cmake-build-debug\CMakeFiles\EmployeeList.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/EmployeeList.dir/depend
 

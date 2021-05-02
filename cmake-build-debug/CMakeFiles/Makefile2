@@ -62,10 +62,10 @@ RM = "C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Ozobi\Desktop\EmployeeList
+CMAKE_SOURCE_DIR = "C:\Users\Ozobi\Desktop\TEMP Projects\EmployeeList"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Ozobi\Desktop\EmployeeList\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Users\Ozobi\Desktop\TEMP Projects\EmployeeList\cmake-build-debug"
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -92,14 +92,14 @@ clean: CMakeFiles/EmployeeList.dir/clean
 CMakeFiles/EmployeeList.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\EmployeeList.dir\build.make CMakeFiles/EmployeeList.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\EmployeeList.dir\build.make CMakeFiles/EmployeeList.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Ozobi\Desktop\EmployeeList\cmake-build-debug\CMakeFiles --progress-num=1,2,3 "Built target EmployeeList"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Ozobi\Desktop\TEMP Projects\EmployeeList\cmake-build-debug\CMakeFiles" --progress-num=1,2,3 "Built target EmployeeList"
 .PHONY : CMakeFiles/EmployeeList.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/EmployeeList.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ozobi\Desktop\EmployeeList\cmake-build-debug\CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Ozobi\Desktop\TEMP Projects\EmployeeList\cmake-build-debug\CMakeFiles" 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/EmployeeList.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ozobi\Desktop\EmployeeList\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Ozobi\Desktop\TEMP Projects\EmployeeList\cmake-build-debug\CMakeFiles" 0
 .PHONY : CMakeFiles/EmployeeList.dir/rule
 
 # Convenience name for target.
