@@ -64,16 +64,12 @@ public:
 	//sets width
 	void setWidth(string);
 
-
-
     //deletes an employee from the list
 	void deleteEmployee(Employee[], string); //employeeID
 
 	//prints out employees by department
-//	void printByEmployeeDepartment(EmployeeDepartment department);
+	void printByEmployeeDepartment(Employee[], EmployeeDepartment department);
 
-	//prints out bad emails
-//	void printIncorrectEmails();
 
 };
 

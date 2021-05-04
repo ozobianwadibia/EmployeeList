@@ -16,7 +16,6 @@ Employee::Employee(string empID, string fName, string lName, string email, int a
     department = dept;
 }
 
-
 //destructor
 Employee::~Employee() {
 }
@@ -101,11 +100,17 @@ string Employee::convertEnumToString(EmployeeDepartment department) {
 
 //method that prints a single employee
 void Employee::printAnEmployee(Employee emp) {
-    cout << "Employee ID: " << emp.getEmployeeID() << "\t" <<
-         "First Name: " << emp.getFirstName() << "\t" <<
-         "Last Name: " << emp.getLastName() << "\t" <<
-         "Employee Department: " << convertEnumToString(emp.getDepartment()) << endl;
+    string heading1 = "[Employee ID]: ";
+    string heading2 = "[First Name]: ";
+    string heading3 = "[Last Name]: ";
+    string heading4 = "[Employee Department]: ";
+
+    cout << heading1 << emp.getEmployeeID() << "\t" <<
+            heading2 << emp.getFirstName() << "\t" <<
+            heading3 << emp.getLastName() << "\t" <<
+            heading4 << convertEnumToString(emp.getDepartment()) << endl;
 }
+
 
 //print method that displays all employees
 void Employee::printEveryEmployee(Employee emp[]) {
@@ -144,9 +149,6 @@ void Employee::deleteEmployee(Employee e[], string ID) {
         }
     }
 
-
-
-
 //method that sets width of underscores
     void Employee::setWidth(string comment) {
         int width = comment.length();
@@ -178,25 +180,19 @@ void Employee::deleteEmployee(Employee e[], string ID) {
         }
     }
 
-
-
-
-
 //print method that displays employee(s) in a specified department 
-//void Employee::printByEmployeeDepartment(EmployeeDepartment department)
-//{
-//	cout << "Employee(s) who work in this department: " << "[" << enumToDepartmentString(department) << "]" << ", are printed below: " << endl;
-//	cout << setfill('-') << setw(75) << "" << endl;
-//	for (int x = 0; x < 10; x++) {
-//		if (employeeListArray[x].getDepartment() == department) {
-//			employeeListArray[x].print();
-//		}
-//	}
-//}
+void Employee::printByEmployeeDepartment(Employee e[], EmployeeDepartment department)
+{
+    int size = 10;
+	cout << "Employee(s) who work in this department: " << "[" << enumToDepartmentString(department) << "]" << ", are printed below: " << endl;
+	cout << setfill('-') << setw(80) << "" << endl;
+	for (int x = 0; x < size; x++) {
+		if (e[x].getDepartment() == department) {
+			e[x].printAnEmployee(e[x]);
+		}
+	}
+}
 
-//print method that displays employee(s) with invalid emails
-//void Employee::printIncorrectEmails()
-//{
-//}
+
 
 

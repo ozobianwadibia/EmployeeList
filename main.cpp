@@ -31,18 +31,24 @@ int main()
     employeeListArray[8] = a9;
     employeeListArray[9] = a10;
 
-    employeeListArray->printEveryEmployee(employeeListArray);
-    employeeListArray->deleteEmployee(employeeListArray, "EN019");
-    employeeListArray->printEveryEmployee(employeeListArray);
-    employeeListArray->deleteEmployee(employeeListArray, "EN019");
-    employeeListArray->printEveryEmployee(employeeListArray);
-    employeeListArray->deleteEmployee(employeeListArray, "EN015");
-    employeeListArray->printEveryEmployee(employeeListArray);
-    employeeListArray->deleteEmployee(employeeListArray, "EN015");
-    employeeListArray->printEveryEmployee(employeeListArray);
-
-
+    cout << "\nPrinting a single employee..." << endl;
     employeeListArray->printAnEmployee(a1);
+    cout << endl;
+
+    employeeListArray->printEveryEmployee(employeeListArray);
+    employeeListArray->deleteEmployee(employeeListArray, "EN019");
+    employeeListArray->printEveryEmployee(employeeListArray);
+    employeeListArray->deleteEmployee(employeeListArray, "EN019");
+    employeeListArray->printEveryEmployee(employeeListArray);
+    employeeListArray->deleteEmployee(employeeListArray, "EN015");
+    employeeListArray->printEveryEmployee(employeeListArray);
+    employeeListArray->deleteEmployee(employeeListArray, "EN015");
+    employeeListArray->printEveryEmployee(employeeListArray);
+
+    employeeListArray->printByEmployeeDepartment(employeeListArray, HUMAN_RESOURCES);
+
+
+
 
     cout << endl;
 
