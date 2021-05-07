@@ -18,7 +18,7 @@ int main()
      Employee a9("EN018", "Gianna", "Johnson", "g.johnson@randatmail.com", 41, PUBLIC_RELATIONS);
      Employee a10("EN019", "Frederick", "Cooper", "f.cooper@randatmail.com", 38, PUBLIC_RELATIONS);
 
-     const int empArraySize = sizeof(employeeListArray) / sizeof(employeeListArray[0]);
+//     const int empArraySize = sizeof(employeeListArray) / sizeof(employeeListArray[0]);
 
     employeeListArray[0] = a1;
     employeeListArray[1] = a2;
@@ -35,7 +35,13 @@ int main()
     employeeListArray->printAnEmployee(a1);
     cout << endl;
 
+
+
     employeeListArray->printEveryEmployee(employeeListArray);
+
+    employeeListArray->printByEmployeeDepartment(employeeListArray, HUMAN_RESOURCES);
+    employeeListArray->printByEmployeeDepartment(employeeListArray, INFORMATION_TECHNOLOGY);
+
     employeeListArray->deleteEmployee(employeeListArray, "EN019");
     employeeListArray->printEveryEmployee(employeeListArray);
     employeeListArray->deleteEmployee(employeeListArray, "EN019");
@@ -45,7 +51,7 @@ int main()
     employeeListArray->deleteEmployee(employeeListArray, "EN015");
     employeeListArray->printEveryEmployee(employeeListArray);
 
-    employeeListArray->printByEmployeeDepartment(employeeListArray, HUMAN_RESOURCES);
+
 
 
 

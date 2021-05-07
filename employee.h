@@ -53,7 +53,10 @@ public:
 
 public:
     //helper function to convert enums to string
-    string convertEnumToString(EmployeeDepartment department);
+    string convertEnumToDepartmentString(EmployeeDepartment department);
+
+    //heading
+    void listTableHeading();
 
     //prints one employee
     void printAnEmployee(Employee);

@@ -75,41 +75,51 @@ void Employee::setEmployeeDepartment(EmployeeDepartment dept) {
 }
 
 
-//method that converts enums to strings
-string Employee::convertEnumToString(EmployeeDepartment department) {
+//helper method that converts enum values to string
+string Employee::convertEnumToDepartmentString(EmployeeDepartment department) {
     switch (department) {
-        case INFORMATION_TECHNOLOGY:
+        case 0:
             return "Information Technology";
             break;
-        case HUMAN_RESOURCES:
+        case 1:
             return "Human Resources";
             break;
-        case FINANCE:
+        case 2:
             return "Finance";
             break;
-        case LEGAL:
+        case 3:
             return "Legal";
             break;
-        case PUBLIC_RELATIONS:
+        case 4:
             return "Public Relations";
             break;
         default:
-            return "Department, not found or Invalid!";
+            return "Department, not found!";
     }
+}
+
+void Employee::listTableHeading() {
+
+    string heading1 = "[Employee ID]\t\t";
+    string heading2 = "[First Name]\t\t";
+    string heading3 = "[Last Name]\t\t";
+    string heading4 = "[Age]\t\t";
+    string heading5 = "[Employee Department]";
+    string title = heading1 + heading2 + heading3 + heading4 + heading5;
+
+    cout << title << endl;
 }
 
 //method that prints a single employee
 void Employee::printAnEmployee(Employee emp) {
-    string heading1 = "[Employee ID]: ";
-    string heading2 = "[First Name]: ";
-    string heading3 = "[Last Name]: ";
-    string heading4 = "[Employee Department]: ";
 
-    cout << heading1 << emp.getEmployeeID() << "\t" <<
-            heading2 << emp.getFirstName() << "\t" <<
-            heading3 << emp.getLastName() << "\t" <<
-            heading4 << convertEnumToString(emp.getDepartment()) << endl;
+    cout << emp.getEmployeeID() << "\t\t\t"
+         << emp.getFirstName() << "\t\t\t"
+         << emp.getLastName() << "\t\t\t"
+         << emp.getChronologicalAge() << "\t\t\t"
+         << convertEnumToDepartmentString(emp.getDepartment()) << endl;
 }
+
 
 
 //print method that displays all employees
@@ -118,6 +128,7 @@ void Employee::printEveryEmployee(Employee emp[]) {
     cout << heading << endl;
     Employee::setWidth(heading);
     cout << endl;
+    Employee::listTableHeading(); //calling the heading method
     for (int j = 0; j < 10; j++) {
         if (emp[j].getEmployeeID() != "") {
             emp[j].printAnEmployee(emp[j]);
@@ -127,7 +138,7 @@ void Employee::printEveryEmployee(Employee emp[]) {
 }
 
 void Employee::deleteEmployee(Employee e[], string ID) {
-    cout << "Calling the 'deleteEmployee' method for: " << ID << endl;
+    cout << "\nCalling the 'deleteEmployee' method for: " << ID << endl;
     int i;
     int size = 10;
     int noEmployee = 0;
@@ -157,37 +168,16 @@ void Employee::deleteEmployee(Employee e[], string ID) {
         }
     }
 
-//helper method that converts enum values to string
-    string enumToDepartmentString(EmployeeDepartment department) {
-        switch (department) {
-            case 0:
-                return "INFORMATION_TECHNOLOGY";
-                break;
-            case 1:
-                return "HUMAN_RESOURCES";
-                break;
-            case 2:
-                return "FINANCE";
-                break;
-            case 3:
-                return "LEGAL";
-                break;
-            case 4:
-                return "PUBLIC_RELATIONS";
-                break;
-            default:
-                return "Department, not found!";
-        }
-    }
+
 
 //print method that displays employee(s) in a specified department 
 void Employee::printByEmployeeDepartment(Employee e[], EmployeeDepartment department)
 {
     int size = 10;
-	cout << "Employee(s) who work in this department: " << "[" << enumToDepartmentString(department) << "]" << ", are printed below: " << endl;
+	cout << "\nEmployee(s) who work in " << "[" << convertEnumToDepartmentString(department) << "]" << ", are printed below: " << endl;
 	cout << setfill('-') << setw(80) << "" << endl;
 	for (int x = 0; x < size; x++) {
-		if (e[x].getDepartment() == department) {
+		if ((e[x].getDepartment() == department) && (e[x].getEmployeeID() != "")) {
 			e[x].printAnEmployee(e[x]);
 		}
 	}
