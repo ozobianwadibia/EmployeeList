@@ -100,27 +100,23 @@ string Employee::convertEnumToDepartmentString(EmployeeDepartment department) {
 
 void Employee::listTableHeading() {
 
-    string heading1 = "[Employee ID]\t\t";
-    string heading2 = "[First Name]\t\t";
-    string heading3 = "[Last Name]\t\t";
-    string heading4 = "[Age]\t\t";
+    string heading1 = "[Employee ID]";
+    string heading2 = "[First Name]";
+    string heading3 = "[Last Name]";
+    string heading4 = "[Age]";
     string heading5 = "[Employee Department]";
-    string title = heading1 + heading2 + heading3 + heading4 + heading5;
-
-    cout << title << endl;
+    cout << setw(15) << heading1 << setw(20) << heading2 << setw(20) << heading3 << setw(15) << heading4 << setw(35) << heading5 << endl;
 }
 
 //method that prints a single employee
 void Employee::printAnEmployee(Employee emp) {
-
-    cout << emp.getEmployeeID() << "\t\t\t"
-         << emp.getFirstName() << "\t\t\t"
-         << emp.getLastName() << "\t\t\t"
-         << emp.getChronologicalAge() << "\t\t\t"
+    cout << left;
+    cout << setw(15) << emp.getEmployeeID() << setw(20)
+         << emp.getFirstName() << setw(20)
+         << emp.getLastName() << setw(15)
+         << emp.getChronologicalAge() << setw(35)
          << convertEnumToDepartmentString(emp.getDepartment()) << endl;
 }
-
-
 
 //print method that displays all employees
 void Employee::printEveryEmployee(Employee emp[]) {
@@ -169,13 +165,20 @@ void Employee::deleteEmployee(Employee e[], string ID) {
     }
 
 
-
 //print method that displays employee(s) in a specified department 
 void Employee::printByEmployeeDepartment(Employee e[], EmployeeDepartment department)
 {
     int size = 10;
-	cout << "\nEmployee(s) who work in " << "[" << convertEnumToDepartmentString(department) << "]" << ", are printed below: " << endl;
-	cout << setfill('-') << setw(80) << "" << endl;
+    string heading_beg = "\nEmployee(s) who work in ";
+    string heading_end = ", are printed below: ";
+    string eTs = convertEnumToDepartmentString(department);
+
+    string title = heading_beg + eTs + heading_end;
+    cout << title << endl;
+    Employee::setWidth(title);
+    cout << endl;
+
+    Employee::listTableHeading(); //calling the heading method
 	for (int x = 0; x < size; x++) {
 		if ((e[x].getDepartment() == department) && (e[x].getEmployeeID() != "")) {
 			e[x].printAnEmployee(e[x]);
